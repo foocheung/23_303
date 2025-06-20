@@ -1,0 +1,14 @@
+>copies=5;umi_count=15;group=BEAM_AND_Dual;ag6_umi=NA;covab=ADI-60784|ADI-60732|ADI-62062|ADI-62108|ADI-63050|ADI-63277|ADI-63303|VA014_14|368.01a.A.0069|368.02a.C.0003|368.04.B.0113|368.10.D.0009|368.20.B.0034|368.22.A.0007|COVA1-27|CV10|H712427+K711927|H712443+K711941|PDI-38|R121-3G10|R259-1F4|R410-3D10|Shiakolas_53181-5
+CARGFDYW
+>copies=3;umi_count=6;group=BEAM_AND_Dual;ag6_umi=NA;covab=ADI-60795|ADI-62023|ADI-63264|R849-1F9
+CARGFDLW
+>copies=1;umi_count=12;group=Dual_Only;ag6_umi=437;covab=C2635
+CARDRIDYGMDVW
+>copies=1;umi_count=4;group=Dual_Only;ag6_umi=NA;covab=ADI-62061|C140|C836|R568-2G5|REGN10971
+CARDLYYYGMDVW
+>copies=1;umi_count=2;group=Dual_Only;ag6_umi=55;covab=AZ078|C2628|C2629
+CARDLIDYGMDVW
+>copies=1;umi_count=3;group=Dual_Only;ag6_umi=NA;covab=368.20.B.0010|R339-3B6
+CARGFESW
+>copies=1;umi_count=8;group=Dual_Neg_Only;ag6_umi=2;covab=C2148|WJQ-G10
+CARDLSYYGMDVW

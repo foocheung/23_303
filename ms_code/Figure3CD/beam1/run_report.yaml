@@ -1,0 +1,24 @@
+Date: 2023-12-01
+Running time: 36.0 minutes, 2.052 seconds
+CITE-seq-Count Version: 1.4.3
+Reads processed: 70493794
+Percentage mapped: 99
+Percentage unmapped: 1
+Uncorrected cells: 26
+Correction:
+	Cell barcodes collapsing threshold: 1
+	Cell barcodes corrected: 87852
+	UMI collapsing threshold: 2
+	UMIs corrected: 1336409
+Run parameters:
+	Read1_paths: /Volumes/CHI/PROJECTS_Archive/2022_CHI_PROPOSALS/Katzelnick_Dengue_CHI-303/BEAM/RUN/BEAM_1/23_303_3_BEAM1_S5_R1_001.fastq.gz
+	Read2_paths: /Volumes/CHI/PROJECTS_Archive/2022_CHI_PROPOSALS/Katzelnick_Dengue_CHI-303/BEAM/RUN/BEAM_1/23_303_3_BEAM1_S5_R2_001.fastq.gz
+	Cell barcode:
+		First position: 1
+		Last position: 16
+	UMI barcode:
+		First position: 17
+		Last position: 26
+	Expected cells: 3016
+	Tags max errors: 2
+	Start trim: 0
