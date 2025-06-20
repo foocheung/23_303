@@ -129,6 +129,19 @@ All required input files are provided in the [`data/`](https://github.com/fooche
 
 ## CHI-Developed Tools and Pipelines
 
-**upsetplotgen**
-[https://github.com/foocheung/upsetplotgen](https://github.com/foocheung/upsetplotgen)
-Shiny application for visualizing BCR clone overlap and generating UpSet plots.
+* **[upsetplotgen](https://github.com/foocheung/upsetplotgen)**  
+  Golem-based Shiny app for BCR clonal overlap visualization and summary.  
+  *Developed by Foo Cheung (2025)*
+
+* **[fastaTreeClustering](https://github.com/foocheung/fastaTreeClustering)**  
+  Interactive app for CDR3 clustering and tree visualization using Levenshtein distance.  
+  *Developed by Foo Cheung (2025)*
+
+* **[Demultiplexing_SNPSv2](https://github.com/foocheung/Demultiplexing_SNPSv2)**  
+  Snakemake workflow for RNA-based SNP demultiplexing of pooled scRNA-seq data.  
+  *Developed by Foo Cheung (2022)*
+
+---
+
+
+
