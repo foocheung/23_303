@@ -30,20 +30,20 @@ The links below lead to folders that contain code to reproduce the corresponding
 
 Repository structure with links to key folders:
 
-- [scripts/ms_code/04.TableS1](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/tree/main/scripts/ms_code/04.TableS1) – Scripts used to generate **Table S1**
-- [scripts/ms_code/Figure3CD](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/tree/main/scripts/ms_code/Figure3CD) – Code for **Figure 3C–D**
-- [scripts/ms_code/Figure3E](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/tree/main/scripts/ms_code/Figure3E) – Code for **Figure 3E**
-- [scripts/ms_code/Figure5CDFG](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/tree/main/scripts/ms_code/Figure5CDFG) – Code for **Figure 5C–D–F–G**
-- [scripts/ms_code/Figure5E](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/tree/main/scripts/ms_code/Figure5E) – Code for **Figure 5E**
-- [scripts/ms_code/FigureS2](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/tree/main/scripts/ms_code/FigureS2) – Code for **Supplementary Figure S2**
-- [scripts/ms_code/FigureS4](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/tree/main/scripts/ms_code/FigureS4) – Code for **Supplementary Figure S4**
-- [scripts/ms_code/FigureS5](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/tree/main/scripts/ms_code/FigureS5) – Code for **Supplementary Figure S5**
-- [scripts/ms_code/FigureS6](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/tree/main/scripts/ms_code/FigureS6) – Code for **Supplementary Figure S6**
+- [scripts/ms_code/04.TableS1](https://github.com/foocheung/23_303/tree/main/scripts/ms_code/04.TableS1) – Scripts used to generate **Table S1**
+- [scripts/ms_code/Figure3CD](https://github.com/foocheung/23_303/tree/main/scripts/ms_code/Figure3CD) – Code for **Figure 3C–D**
+- [scripts/ms_code/Figure3E](https://github.com/foocheung/23_303/tree/main/scripts/ms_code/Figure3E) – Code for **Figure 3E**
+- [scripts/ms_code/Figure5CDFG](https://github.com/foocheung/23_303/tree/main/scripts/ms_code/Figure5CDFG) – Code for **Figure 5C–D–F–G**
+- [scripts/ms_code/Figure5E](https://github.com/foocheung/23_303/tree/main/scripts/ms_code/Figure5E) – Code for **Figure 5E**
+- [scripts/ms_code/FigureS2](https://github.com/foocheung/23_303/tree/main/scripts/ms_code/FigureS2) – Code for **Supplementary Figure S2**
+- [scripts/ms_code/FigureS4](https://github.com/foocheung/23_303/tree/main/scripts/ms_code/FigureS4) – Code for **Supplementary Figure S4**
+- [scripts/ms_code/FigureS5](https://github.com/foocheung/23_303/tree/main/scripts/ms_code/FigureS5) – Code for **Supplementary Figure S5**
+- [scripts/ms_code/FigureS6](https://github.com/foocheung/23_303/tree/main/scripts/ms_code/FigureS6) – Code for **Supplementary Figure S6**
 
 Other folders:
 
-- [data/](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/tree/main/data) – Input files used for figure generation
-- [README.md](https://github.com/foocheung/Leveraging-OligoTagged-Proteogenomic-CHI/blob/main/README.md) – Overview of methods, tools, and usage instructions
+- [data/](https://github.com/foocheung/23_303/tree/main/data) – Input files used for figure generation
+- [README.md](https://github.com/foocheung/23_303/blob/main/README.md) – Overview of methods, tools, and usage instructions
 
 
 
