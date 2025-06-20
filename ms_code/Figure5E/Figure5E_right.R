@@ -174,7 +174,7 @@ p4 <- make_log_plot(dual_df_heavy, "DUAL Heavy Chain: D614G UMI", dual_compariso
 #plot_grid(p1, p2, ncol = 2)
 #ggsave("v2D_BEAM_All_Chain_UMI_Boxplots.png", dpi = 300, width = 14, height = 7)
 
-plot_grid(p3)
+#plot_grid(p3)
 ggsave("Figure5_right.pdf")
 
 

@@ -47,7 +47,7 @@ make_colored_tree_by_edit_distance <- function(clone_data, label, outdir = ".", 
     tip_cdr3s <- aa_seqs[tree$tip.label]
     
     graph <- graph_from_adjacency_matrix(dist_matrix == 0, mode = "undirected", diag = FALSE)
-    cluster_membership <- clusters(graph)$membership
+    cluster_membership <- components(graph)$membership
     clone_data$Cluster <- paste0("Cluster_", cluster_membership[match(clone_data$Clone_ID, names(aa_seqs))])
     
     cluster_counts <- table(clone_data$Cluster)
@@ -63,12 +63,12 @@ make_colored_tree_by_edit_distance <- function(clone_data, label, outdir = ".", 
     message("Tree cached to: ", cache_file)
   }
   
-  # ── Save CDR3-labeled tree ──
-  labeled_svg <- file.path(outdir, paste0("v4_Tree_", gsub("[^A-Za-z0-9]", "_", label), "_CDR3Labels.svg"))
+  # ── Save CDR3-labeled tree as PDF ──
+  labeled_pdf <- file.path("FigureS5_CDR3Labels.pdf")
   tree_labeled <- tree
   tree_labeled$tip.label <- tip_cdr3s
   
-  svg(filename = labeled_svg, width = 30, height = 26)
+  pdf(file = labeled_pdf, width = 30, height = 26)
   plot(tree_labeled, show.tip.label = FALSE, main = paste("CDR3-Labeled Tree -", label), cex = 0.6)
   tree_plot <- get("last_plot.phylo", envir = .PlotPhyloEnv)
   text(
@@ -82,32 +82,18 @@ make_colored_tree_by_edit_distance <- function(clone_data, label, outdir = ".", 
   )
   legend("topright", legend = names(group_colors), col = group_colors, pch = 19, cex = 0.8)
   dev.off()
-  message("CDR3-labeled tree saved to: ", labeled_svg)
+  message("CDR3-labeled tree saved to: ", labeled_pdf)
   
-  # ── Save colored-tip-only tree ──
-  color_svg <- file.path(outdir, paste0("v4_Tree_", gsub("[^A-Za-z0-9]", "_", label), ".svg"))
-  svg(filename = color_svg, width = 30, height = 26)
+  # ── Save colored-tip-only tree as PDF ──
+  color_pdf <-"FigureS5.pdf"
+  pdf(file = color_pdf, width = 30, height = 26)
   plot(tree, show.tip.label = FALSE, main = paste("Colored CDR3 Tree -", label), cex = 0.6)
   tiplabels(pch = 19, col = tip_colors, cex = 0.6)
   legend("topright", legend = names(group_colors), col = group_colors, pch = 19, cex = 0.8)
   dev.off()
-  message("Tree plot saved to: ", color_svg)
+  message("Tree plot saved to: ", color_pdf)
   
-  # ── Save cluster summary CSV ──
-  if ("Cluster" %in% names(clone_data)) {
-    cluster_summary <- clone_data %>%
-      group_by(Cluster) %>%
-      summarise(
-        Total = n(),
-        Groups = paste(sort(unique(Group)), collapse = ","),
-        Mixed = n_distinct(Group) > 1,
-        Isolated = n() == 1,
-        Sample_CDR3s = paste(head(junction_aa, 5), collapse = "; ")
-      )
-    cluster_csv <- file.path(outdir, paste0("v3_ClusterSummary_", gsub("[^A-Za-z0-9]", "_", label), ".csv"))
-    write_csv(cluster_summary, cluster_csv)
-    message("Cluster summary written to: ", cluster_csv)
-  }
+
 }
 
 # --------- Wrapper function ---------
@@ -130,39 +116,13 @@ process_upset_merge_tree <- function(matrix_csv, label_tag, test_mode = FALSE) {
   }
   
   out_dir <- dirname(matrix_csv)
-  make_colored_tree_by_edit_distance(merged, paste0(label_tag, "_v3_Merged"), outdir = out_dir, force_rebuild = TRUE)
+  make_colored_tree_by_edit_distance(merged, paste0(label_tag, ""), outdir = out_dir, force_rebuild = TRUE)
 }
 
 # -------- Process individual set ---------
-process_upset_merge_tree <- function(matrix_csv, label_tag, test_mode = FALSE) {
-  df <- read_csv(matrix_csv, col_types = cols()) %>%
-    mutate(code = paste0(BEAM_Positive, BEAM_Negative, DualLabeling_Positive, DualLabeling_Negative))
-  
-  beam_only <- df %>% filter(code == "1000") %>% mutate(Group = "BEAM_Only")
-  dual_only <- df %>% filter(code == "0010") %>% mutate(Group = "Dual_Only")
-  shared    <- df %>% filter(code == "1010") %>% mutate(Group = "Shared")
-  
-  merged <- bind_rows(beam_only, dual_only, shared) %>%
-    filter(!duplicated(junction_aa)) %>%
-    mutate(Clone_ID = paste0("Clone", row_number()))
-  
-  if (test_mode) {
-    set.seed(123)
-    merged <- merged %>% sample_frac(0.2)
-    message("Test mode: sampled ", nrow(merged), " rows.")
-  }
-  
-  out_dir <- dirname(matrix_csv)
-  make_colored_tree_by_edit_distance(merged, paste0(label_tag, "_v3_Merged"), outdir = out_dir, force_rebuild =TRUE)
-}
-
-
-
-
 dirs <- "../../data"
 
 for (dir in dirs) {
-  #  for (type in c("All", "Heavy", "Light")) {
   for (type in c("Heavy")) {
     matrix_file <- list.files(dir, pattern = paste0("JunctionAA_Matrix_", type, "\\.csv"), full.names = TRUE)
     if (length(matrix_file) != 1) next
