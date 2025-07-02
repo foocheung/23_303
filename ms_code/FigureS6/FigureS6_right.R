@@ -187,6 +187,6 @@ p3 <- make_log_plot(dual_df_light, "DUAL Light Chain: D614G UMI", dual_compariso
 p4 <- make_log_plot(dual_df_heavy, "DUAL Heavy Chain: D614G UMI", dual_comparisons)
 
 
-
+plot_grid(p4)
 ggsave("FigureS6_right.pdf")
 
