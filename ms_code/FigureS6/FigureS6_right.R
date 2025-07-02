@@ -1,8 +1,8 @@
 # ------------------------------------------------------------------------------
 # Title: FigureS6_right.R
 # Description: This script loads Seurat objects from BEAM and DUAL labeling 
-# experiments (positive and negative), extracts D614G UMI counts from the Antigen 
-# or ADT assay, links those counts to BCR-defined clone barcodes from intersection 
+# experiments (positive and negative), extracts D614G UMI counts,
+# links those counts to BCR-defined clone barcodes from intersection 
 # sets, and plots log10-scaled UMI distributions grouped by condition. Heavy 
 # chains are analyzed. Group comparisons are annotated with Wilcoxon 
 # significance levels.
