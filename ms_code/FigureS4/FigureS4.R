@@ -1,3 +1,16 @@
+# ------------------------------------------------------------------------------
+# Title: FigureS4.R
+# Description: This script reads BEAM and Dual labeling overlap matrices, extracts 
+# light chain junction amino acid sequences, assigns clone group (BEAM_Only, Dual_Only, Shared),
+# builds a neighbor-joining tree based on Levenshtein distance between CDR3s, identifies 
+# clusters via zero-distance graph components, and saves both colored-tip-only and 
+# CDR3-labeled trees as high-resolution PDFs. Supports caching and test mode subsampling.
+#
+# Created by: Foo Cheung (foo.cheung@nih.gov)
+# Date: 2025
+# ------------------------------------------------------------------------------
+
+
 library(dplyr)
 library(readr)
 library(tidyr)
