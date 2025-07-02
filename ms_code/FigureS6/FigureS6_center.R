@@ -1,3 +1,17 @@
+# ------------------------------------------------------------------------------
+# Title: FigureS6_center.R
+# Description: This script reads heavy clone-level annotation 
+# data with BEAM and Dual labeling, filters to shared and exclusive groups, 
+# calculates the distribution of clone copy counts (BEAM_Count + Dual_Count), 
+# and visualizes the per-group proportion of clones at each copy count level.
+# Plots are generated separately for heavy chains and saved as PDFs.
+#
+# Created by: Foo Cheung (foo.cheung@nih.gov)
+# Date: 2025
+# ------------------------------------------------------------------------------
+
+
+
 library(ggplot2)
 library(dplyr)
 library(tidyr)
