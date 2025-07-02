@@ -1,8 +1,8 @@
 # ------------------------------------------------------------------------------
 # Title: Figure5E_right.R
-# Description: This script loads Seurat objects from BEAM and DUAL labeling 
-# experiments (positive and negative), extracts D614G UMI counts from the Antigen 
-# or ADT assay, links those counts to BCR-defined clone barcodes from intersection 
+# Description: This script loads Seurat objects from DUAL labeling 
+# experiments (positive and negative), extracts D614G UMI counts,  
+# links those counts to BCR-defined clone barcodes from intersection 
 # sets, and plots log10-scaled UMI distributions grouped by condition.  
 # Light chains are analyzed. Group comparisons are annotated with Wilcoxon 
 # significance levels.
@@ -189,7 +189,7 @@ p4 <- make_log_plot(dual_df_heavy, "DUAL Heavy Chain: D614G UMI", dual_compariso
 #plot_grid(p1, p2, ncol = 2)
 #ggsave("v2D_BEAM_All_Chain_UMI_Boxplots.png", dpi = 300, width = 14, height = 7)
 
-#plot_grid(p3)
+plot_grid(p3)
 ggsave("Figure5_right.pdf")
 
 
