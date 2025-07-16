@@ -40,7 +40,7 @@ Repository structure with links to key folders:
 - [ms_code/FigureS5](https://github.com/foocheung/23_303/tree/main/ms_code/FigureS5) – Scripts for **Supplementary Figure S5**
 - [ms_code/FigureS6](https://github.com/foocheung/23_303/tree/main/ms_code/FigureS6) – Scripts for **Supplementary Figure S6**
 - [ms_code/04.TableS1](https://github.com/foocheung/23_303/tree/main/ms_code/04.TableS1) – Scripts used to generate **Table S1**
-- [ms_code/TableS3](https://github.com/foocheung/23_303/tree/main/ms_code/TableS3) – Scripts used to generate **Table 4**
+- [ms_code/TableS3](https://github.com/foocheung/23_303/tree/main/ms_code/TableS3) – Scripts used to generate **Table S3**
 
 Other folders:
 
