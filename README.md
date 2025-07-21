@@ -1,7 +1,3 @@
-# In  Progress......
-
-
-
 # Leveraging Optimized Oligonucleotide-Tagged Antigen Assemblies and Single-Cell Sequencing for Multiplexed Proteogenomic Profiling of Human B Cell Antigen Reactivities
 
 This repository contains the core code and pipelines used in the forthcoming manuscript:
